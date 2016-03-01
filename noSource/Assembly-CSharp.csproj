@@ -45,7 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\SCRIPTS\CoreGameLoop.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\Robot Brain.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\Robot Movement.cs" />
+     <Compile Include="Assets\SCRIPTS\System\GameSettings.cs" />
+     <Compile Include="Assets\SCRIPTS\System\MainMenu.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
