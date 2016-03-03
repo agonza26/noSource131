@@ -32,7 +32,8 @@ public class MainMenu : MonoBehaviour {
         }
         if (GUI.Button(new Rect(Screen.width * guiPlacementX1, Screen.height * guiPlacementY1, Screen.width * .25f, Screen.height * .1f),levelSelect, ""))
         {
-            print("Insert options here");
+            print("Insert level select");
+            GUI.Button(new Rect(Screen.width * .25f, Screen.height * .8f, Screen.width * .1f, Screen.height * .1f),"Level 1");
         }
         if (GUI.Button(new Rect(Screen.width * guiPlacementX2, Screen.height * guiPlacementY2, Screen.width * .25f, Screen.height * .1f),settings, ""))
         {
