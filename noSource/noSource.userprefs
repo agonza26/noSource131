@@ -1,6 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SCRIPTS/Player/RobotBrain.cs">
+    <Files>
+      <File FileName="Assets/SCRIPTS/System/GameSettings.cs" Line="65" Column="22" />
+      <File FileName="Assets/SCRIPTS/Player/RobotBrain.cs" Line="58" Column="9" />
+      <File FileName="Assets/Console.cs" Line="24" Column="3" />
+      <File FileName="Assets/SCRIPTS/System/CameraController.cs" Line="19" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

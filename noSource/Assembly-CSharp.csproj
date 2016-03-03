@@ -45,8 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\SCRIPTS\Player\Robot Brain.cs" />
-     <Compile Include="Assets\SCRIPTS\Player\Robot Movement.cs" />
+     <Compile Include="Assets\Console.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\RobotBrain.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\RobotMovement.cs" />
+     <Compile Include="Assets\SCRIPTS\System\CameraController.cs" />
      <Compile Include="Assets\SCRIPTS\System\GameSettings.cs" />
      <Compile Include="Assets\SCRIPTS\System\MainMenu.cs" />
  <Reference Include="UnityEngine.UI">
