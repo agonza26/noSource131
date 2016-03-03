@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\Main Menu\Scripts\MainMenu.cs" />
     <Compile Include="Assets\SCRIPTS\CoreGameLoop.cs" />
+    <Compile Include="Assets\SCRIPTS\UIControl.cs" />
+    <Compile Include="Assets\SCRIPTS\levelSelect.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

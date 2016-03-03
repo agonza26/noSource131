@@ -17,4 +17,9 @@ public class UIControl : MonoBehaviour {
     {
         Application.LoadLevel(sceneName);
     }
+
+    public void newGame(string sceneName)
+    {
+        Application.LoadLevel(sceneName);
+    }
 }
