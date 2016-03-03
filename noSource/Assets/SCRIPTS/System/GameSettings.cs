@@ -86,4 +86,19 @@ public class GameSettings : MonoBehaviour {
 
 
 
+	public void Quit (){
+		Application.Quit();
+		Debug.Log ("Shit aint quittin");
+
+
+
+	}
+
+
+
+
+
+
+
+
 }

@@ -7,9 +7,30 @@ public class RobotBrain : MonoBehaviour {
 	public float walkSpeed = 0f;
 	public float jumpHeight = 0f;
 	public float wait = 1f;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public bool error = false;
 	public GameObject err;
 	public GameObject don;
+
+
+
+
 
 
 
@@ -18,6 +39,10 @@ public class RobotBrain : MonoBehaviour {
 	private float lifetime = 0f;
 	private Vector3 startPos;
 	private Rigidbody2D bod;
+
+
+
+
 
 
 
@@ -38,6 +63,12 @@ public class RobotBrain : MonoBehaviour {
 
 
 
+
+
+
+
+
+
 	// Update is called once per frame
 	void Update () {
 		if (error) {
@@ -50,7 +81,7 @@ public class RobotBrain : MonoBehaviour {
 
 
 			//if we aren't at our maximum speed, get there to continue walking
-			if (bod.velocity.x < walkSpeed) {
+			if (bod.velocity.x < walkSpeed*10) {
 				bod.velocity+= Vector2.right*2;
 			}
 
@@ -101,7 +132,7 @@ public class RobotBrain : MonoBehaviour {
 
 	void jump(){
 		
-		bod.velocity+= Vector2.up*jumpHeight;
+		bod.velocity+= Vector2.up*jumpHeight*10;
 
 	}
 

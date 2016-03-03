@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Main Scene.unity
   - enabled: 1
     path: Assets/Scene/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scene/Level1.unity
