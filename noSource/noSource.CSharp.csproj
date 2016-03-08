@@ -66,6 +66,8 @@
     <Compile Include="Assets\Main Menu\Scripts\MainMenu.cs" />
     <Compile Include="Assets\SCRIPTS\CoreGameLoop.cs" />
     <Compile Include="Assets\SCRIPTS\GameData.cs" />
+    <Compile Include="Assets\SCRIPTS\LockLevel.cs" />
+    <Compile Include="Assets\SCRIPTS\LockScreen.cs" />
     <Compile Include="Assets\SCRIPTS\SaveLoad.cs" />
     <Compile Include="Assets\SCRIPTS\UIControl.cs" />
     <Compile Include="Assets\SCRIPTS\levelSelect.cs" />
