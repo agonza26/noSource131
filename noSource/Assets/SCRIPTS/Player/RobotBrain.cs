@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class RobotBrain : MonoBehaviour {
@@ -108,6 +109,8 @@ public class RobotBrain : MonoBehaviour {
 
 
 	public void toggleRun(){
+        InputField Input = GameObject.Find("arrows").GetComponent<InputField>();
+        Interpreter.Interpreter.RunInterpreter(Input.text);
 		run = !run;
 
 		if (!run) {
