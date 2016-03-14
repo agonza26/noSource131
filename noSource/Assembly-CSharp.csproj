@@ -47,6 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Console.cs" />
      <Compile Include="Assets\SCRIPTS\CoreGameLoop.cs" />
+     <Compile Include="Assets\SCRIPTS\Interpreter\Interpreter.cs" />
+     <Compile Include="Assets\SCRIPTS\Interpreter\ShiftReduceParserCode.cs" />
+     <Compile Include="Assets\SCRIPTS\Interpreter\parser.cs" />
+     <Compile Include="Assets\SCRIPTS\Interpreter\scanner.cs" />
      <Compile Include="Assets\SCRIPTS\Player\RobotBrain.cs" />
      <Compile Include="Assets\SCRIPTS\Player\RobotMovement.cs" />
      <Compile Include="Assets\SCRIPTS\System\CameraController.cs" />
@@ -54,6 +58,7 @@
      <Compile Include="Assets\SCRIPTS\System\MainMenu.cs" />
      <Compile Include="Assets\SCRIPTS\UIControl.cs" />
      <Compile Include="Assets\SCRIPTS\levelSelect.cs" />
+     <Compile Include="Assets\SCRIPTS\shit.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
