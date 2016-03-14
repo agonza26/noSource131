@@ -181,7 +181,7 @@ namespace Interpreter
             symtable = new SymbolTable();
             robottable = new SymbolTable();
             robottable.InsertSymbol("walkSpeed", Attr.INT, "1");
-            robottable.InsertSymbol("jump", Attr.BOOL, "");
+            robottable.InsertSymbol("willJump", Attr.BOOL, "false");
             SemanticAnalysis(parser.ParserRoot);
             Console.print(parser.ParserRoot);
             if (!error)
@@ -461,6 +461,17 @@ namespace Interpreter
         }
         #endregion
 
+        private static string FirstLetterToUpper(string str)
+        {
+            if (str == null)
+                return null;
+
+            if (str.Length > 1)
+                return char.ToUpper(str[0]) + str.Substring(1);
+
+            return str.ToUpper();
+        }
+
         private static void Interpret(ASTree root)
         {
             foreach(ASTree child in root.Children)
@@ -471,7 +482,10 @@ namespace Interpreter
                         switch (child.Children[0].LexInfo)
                         {
                             case "walkSpeed":
-							robot.setSpeed("Normal",int.Parse(child.Children[1].Value));
+							    robot.setSpeed("Normal",int.Parse(child.Children[1].Value));
+                                break;
+                            case "willJump":
+                                robot.canJump("Normal", bool.Parse(FirstLetterToUpper(child.Children[1].Value)), 10);
                                 break;
                         }
                         break;

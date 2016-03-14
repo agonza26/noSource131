@@ -6,9 +6,9 @@
 //
 //  GPLEX Version:  1.2.2
 //  Machine:  DYLAN-LAP
-//  DateTime: 3/13/2016 5:50:53 PM
+//  DateTime: 3/14/2016 10:20:37 AM
 //  UserName: Dylan
-//  GPLEX input file <E:\Users\Dylan\Desktop\gppg-distro-1_5_2\binaries\scanner.lex - 3/13/2016 5:50:36 PM>
+//  GPLEX input file <E:\Users\Dylan\Desktop\gppg-distro-1_5_2\binaries\scanner.lex - 3/14/2016 10:20:22 AM>
 //  GPLEX frame file <embedded resource>
 //
 //  Option settings: verbose, parser, minimize
@@ -124,8 +124,8 @@ namespace Interpreter
         
         enum Result {accept, noMatch, contextFound};
 
-        const int maxAccept = 89;
-        const int initial = 90;
+        const int maxAccept = 90;
+        const int initial = 91;
         const int eofNum = 0;
         const int goStart = -1;
         const int INITIAL = 0;
@@ -162,9 +162,9 @@ namespace Interpreter
         }
     };
 
-    static int[] startState = new int[] {90, 0};
+    static int[] startState = new int[] {91, 0};
 
-    static Table[] NxS = new Table[96] {
+    static Table[] NxS = new Table[97] {
 /* NxS[   0] */ new Table(0, 0, 0, null), // Shortest string ""
 /* NxS[   1] */ new Table(0, 0, -1, null), // Shortest string "\x01"
 /* NxS[   2] */ // Shortest string "\t"
@@ -173,21 +173,21 @@ namespace Interpreter
           -1, 2}),
 /* NxS[   3] */ new Table(0, 0, -1, null), // Shortest string "\n"
 /* NxS[   4] */ // Shortest string "!"
-      new Table(61, 1, -1, new sbyte[] {89}),
+      new Table(61, 1, -1, new sbyte[] {90}),
 /* NxS[   5] */ // Shortest string "\""
       new Table(10, 83, 5, new sbyte[] {-1, 5, 5, 5, 5, 5, 
           5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 
-          5, 5, 88, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 
+          5, 5, 89, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 
           5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 
           5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 
-          5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 95}),
+          5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 96}),
 /* NxS[   6] */ // Shortest string "'"
-      new Table(10, 83, 86, new sbyte[] {-1, 86, 86, 86, 86, 86, 
-          86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 
-          86, 86, 86, 86, 86, 86, 86, -1, 86, 86, 86, 86, 86, 86, 86, 86, 
-          86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 
-          86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 
-          86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 93}),
+      new Table(10, 83, 87, new sbyte[] {-1, 87, 87, 87, 87, 87, 
+          87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 
+          87, 87, 87, 87, 87, 87, 87, -1, 87, 87, 87, 87, 87, 87, 87, 87, 
+          87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 
+          87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 
+          87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 87, 94}),
 /* NxS[   7] */ new Table(0, 0, -1, null), // Shortest string "("
 /* NxS[   8] */ new Table(0, 0, -1, null), // Shortest string ")"
 /* NxS[   9] */ new Table(0, 0, -1, null), // Shortest string "*"
@@ -197,9 +197,10 @@ namespace Interpreter
 /* NxS[  13] */ // Shortest string "."
       new Table(48, 10, -1, new sbyte[] {85, 85, 85, 85, 85, 85, 
           85, 85, 85, 85}),
-/* NxS[  14] */ new Table(0, 0, -1, null), // Shortest string "/"
+/* NxS[  14] */ // Shortest string "/"
+      new Table(47, 1, -1, new sbyte[] {86}),
 /* NxS[  15] */ // Shortest string "0"
-      new Table(46, 77, -1, new sbyte[] {92, -1, 15, 15, 15, 15, 
+      new Table(46, 77, -1, new sbyte[] {93, -1, 15, 15, 15, 15, 
           15, 15, 15, 15, 15, 15, -1, -1, -1, -1, -1, -1, -1, 84, 84, 84, 
           84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 
           84, 84, 84, 84, 84, 84, 84, -1, -1, -1, -1, 84, -1, 84, 84, 84, 
@@ -588,7 +589,7 @@ namespace Interpreter
           20, 20, 20, 20, 20, 20, 20, 20, 77, 20, 20, 20, 20, 20, 20, 20, 
           20, 20, 20, 20, 20}),
 /* NxS[  77] */ // Shortest string "brain"
-      new Table(40, 83, -1, new sbyte[] {91, -1, -1, -1, -1, -1, 
+      new Table(40, 83, -1, new sbyte[] {92, -1, -1, -1, -1, -1, 
           -1, -1, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, -1, -1, -1, -1, 
           -1, -1, -1, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 
           20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, -1, -1, -1, 
@@ -622,12 +623,14 @@ namespace Interpreter
 /* NxS[  85] */ // Shortest string ".0"
       new Table(48, 10, -1, new sbyte[] {85, 85, 85, 85, 85, 85, 
           85, 85, 85, 85}),
-/* NxS[  86] */ // Shortest string "'\x01"
-      new Table(39, 1, -1, new sbyte[] {87}),
-/* NxS[  87] */ new Table(0, 0, -1, null), // Shortest string "'\x01'"
-/* NxS[  88] */ new Table(0, 0, -1, null), // Shortest string "\"\""
-/* NxS[  89] */ new Table(0, 0, -1, null), // Shortest string "!="
-/* NxS[  90] */ // Shortest string ""
+/* NxS[  86] */ // Shortest string "//"
+      new Table(10, 1, 86, new sbyte[] {-1}),
+/* NxS[  87] */ // Shortest string "'\x01"
+      new Table(39, 1, -1, new sbyte[] {88}),
+/* NxS[  88] */ new Table(0, 0, -1, null), // Shortest string "'\x01'"
+/* NxS[  89] */ new Table(0, 0, -1, null), // Shortest string "\"\""
+/* NxS[  90] */ new Table(0, 0, -1, null), // Shortest string "!="
+/* NxS[  91] */ // Shortest string ""
       new Table(9, 117, 1, new sbyte[] {2, 3, 1, 1, 1, 1, 
           1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
           1, 2, 4, 5, 1, 1, 1, 1, 6, 7, 8, 9, 10, 11, 12, 13, 
@@ -636,21 +639,21 @@ namespace Interpreter
           20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 1, 22, 1, 
           20, 1, 20, 23, 24, 20, 25, 26, 20, 20, 27, 20, 20, 20, 20, 28, 
           20, 20, 20, 29, 30, 31, 20, 20, 32, 20, 20, 20, 33, 1, 34}),
-/* NxS[  91] */ // Shortest string "brain("
+/* NxS[  92] */ // Shortest string "brain("
       new Table(41, 1, -1, new sbyte[] {78}),
-/* NxS[  92] */ // Shortest string "0."
+/* NxS[  93] */ // Shortest string "0."
       new Table(48, 10, -1, new sbyte[] {85, 85, 85, 85, 85, 85, 
           85, 85, 85, 85}),
-/* NxS[  93] */ // Shortest string "'\\"
-      new Table(34, 83, -1, new sbyte[] {94, -1, -1, -1, -1, 86, 
-          -1, -1, -1, -1, -1, -1, -1, -1, 94, -1, -1, -1, -1, -1, -1, -1, 
+/* NxS[  94] */ // Shortest string "'\\"
+      new Table(34, 83, -1, new sbyte[] {95, -1, -1, -1, -1, 87, 
+          -1, -1, -1, -1, -1, -1, -1, -1, 95, -1, -1, -1, -1, -1, -1, -1, 
           -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
           -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
-          -1, -1, -1, -1, 94, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
-          -1, -1, -1, -1, -1, -1, 94, -1, -1, -1, -1, -1, 94}),
-/* NxS[  94] */ // Shortest string "'\\\""
-      new Table(39, 1, -1, new sbyte[] {87}),
-/* NxS[  95] */ // Shortest string "\"\\"
+          -1, -1, -1, -1, 95, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+          -1, -1, -1, -1, -1, -1, 95, -1, -1, -1, -1, -1, 95}),
+/* NxS[  95] */ // Shortest string "'\\\""
+      new Table(39, 1, -1, new sbyte[] {88}),
+/* NxS[  96] */ // Shortest string "\"\\"
       new Table(34, 83, -1, new sbyte[] {5, -1, -1, -1, -1, 5, 
           -1, -1, -1, -1, -1, -1, -1, -1, 5, -1, -1, -1, -1, -1, -1, -1, 
           -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
@@ -1253,16 +1256,19 @@ LexerBadToken(yytext); return LexerReturn((int)Tokens.IDENT);
         case 85: // Recognized '{FLOAT}',	Shortest string ".0"
 return LexerReturn((int)Tokens.FLOATCON);
             break;
-        case 86: // Recognized '{BADCHAR}',	Shortest string "'\x01"
+        case 86: // Recognized '"/""/".*',	Shortest string "//"
+{ }
+            break;
+        case 87: // Recognized '{BADCHAR}',	Shortest string "'\x01"
 LexerBadToken(yytext); return LexerReturn((int)Tokens.CHAR);
             break;
-        case 87: // Recognized '{CHAR}',	Shortest string "'\x01'"
+        case 88: // Recognized '{CHAR}',	Shortest string "'\x01'"
 return LexerReturn((int)Tokens.CHARCON);
             break;
-        case 88: // Recognized '{STRING}',	Shortest string "\"\""
+        case 89: // Recognized '{STRING}',	Shortest string "\"\""
 return LexerReturn((int)Tokens.STRINGCON);
             break;
-        case 89: // Recognized '!=',	Shortest string "!="
+        case 90: // Recognized '!=',	Shortest string "!="
 return LexerReturn((int)Tokens.NE);
             break;
         default:
