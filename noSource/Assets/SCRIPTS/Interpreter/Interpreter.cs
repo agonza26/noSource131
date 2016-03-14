@@ -200,7 +200,31 @@ namespace Interpreter
             switch (node.Token)
             {
                 case Tokens.VARDECL:
-                    Symbol symbol = symtable.InsertSymbol(node.Children[0]);
+                    ASTree id = node.Children[0].Children[0];
+                    switch (node.Children[0].Token)
+                    {
+                        case Tokens.BOOL:
+                            node.Children[0].Attributes.Set((int)Attr.BOOL, true);
+                            id.Attributes.Set((int)Attr.BOOL, true);
+                            break;
+                        case Tokens.CHAR:
+                            node.Children[0].Attributes.Set((int)Attr.CHAR, true);
+                            id.Attributes.Set((int)Attr.CHAR, true);
+                            break;
+                        case Tokens.FLOAT:
+                            node.Children[0].Attributes.Set((int)Attr.FLOAT, true);
+                            id.Attributes.Set((int)Attr.FLOAT, true);
+                            break;
+                        case Tokens.INT:
+                            node.Children[0].Attributes.Set((int)Attr.INT, true);
+                            id.Attributes.Set((int)Attr.INT, true);
+                            break;
+                        case Tokens.STRING:
+                            node.Children[0].Attributes.Set((int)Attr.STRING, true);
+                            id.Attributes.Set((int)Attr.STRING, true);
+                            break;
+                    }
+                    Symbol symbol = symtable.InsertSymbol(id);
                     break;
             }
             foreach (ASTree child in node.Children)
@@ -210,7 +234,7 @@ namespace Interpreter
             switch(node.Token)
             {
                 case Tokens.VARDECL:
-                    node.Children[0].Value = node.Children[1].Value;
+                    node.Children[0].Children[0].Value = node.Children[1].Value;
                     break;
                 case Tokens.IDENT:
                     TCIdent(node);
@@ -317,6 +341,7 @@ namespace Interpreter
             if (sym == null)
             {
                 error = true;
+                Console.print("Not valid robot variable");
                 return;
             }
             node.Attributes = sym.Attributes;
@@ -336,6 +361,7 @@ namespace Interpreter
             if(!Compatible(left, right))
             {
                 error = true;
+                Console.print("Cannot assign variable");
                 return;
             }
             left.Value = right.Value;
@@ -348,11 +374,13 @@ namespace Interpreter
             if(!Compatible(left, right))
             {
                 error = true;
+                Console.print("Not compatible");
                 return;
             }
             if(!left.Attributes.Get((int)Attr.INT) && !left.Attributes.Get((int)Attr.FLOAT))
             {
                 error = true;
+                Console.print("Cannot do operator");
                 return;
             }
             if(left.Attributes.Get((int)Attr.INT))
@@ -376,6 +404,7 @@ namespace Interpreter
                         break;
                 }
                 node.Value = temp.ToString();
+                node.Attributes.Set((int)Attr.INT, true);
             } else if(left.Attributes.Get((int)Attr.FLOAT))
             {
                 float temp1 = float.Parse(left.Value);
@@ -397,6 +426,7 @@ namespace Interpreter
                         break;
                 }
                 node.Value = temp.ToString();
+                node.Attributes.Set((int)Attr.FLOAT, true);
             }
         }
 
@@ -433,7 +463,6 @@ namespace Interpreter
 
         private static void Interpret(ASTree root)
         {
-            Console.print("interpreting");
             foreach(ASTree child in root.Children)
             {
                 switch(child.Token)
