@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Spike
   - Terminal
+  - Blue
+  - Yellow
+  - Green
+  - Normal
+  - Ground
+  - MFDOOM
   layers:
   - Default
   - TransparentFX
