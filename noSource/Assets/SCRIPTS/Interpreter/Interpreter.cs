@@ -170,29 +170,18 @@ namespace Interpreter
         private static SymbolTable symtable;
         private static SymbolTable robottable;
         private static bool error;
-<<<<<<< HEAD
-        public static void RunInterpreter(string input)
-=======
         public static void RunInterpreter(RobotBrain rb, string input)
->>>>>>> refs/remotes/origin/master
         {
             error = false;
             Scanner scanner = new Scanner();
             scanner.SetSource(input, 0);
             Parser parser = new Parser(scanner);
             parser.Parse();
-<<<<<<< HEAD
-            SetRobot();
-            symtable = new SymbolTable();
-            robottable = new SymbolTable();
-            robottable.InsertSymbol("walkSpeed", Attr.FLOAT, "2.0");
-=======
 			robot = rb;
             symtable = new SymbolTable();
             robottable = new SymbolTable();
             robottable.InsertSymbol("walkSpeed", Attr.INT, "1");
->>>>>>> refs/remotes/origin/master
-            robottable.InsertSymbol("jump", Attr.BOOL, "");
+            robottable.InsertSymbol("willJump", Attr.BOOL, "false");
             SemanticAnalysis(parser.ParserRoot);
             Console.print(parser.ParserRoot);
             if (!error)
@@ -472,6 +461,17 @@ namespace Interpreter
         }
         #endregion
 
+        private static string FirstLetterToUpper(string str)
+        {
+            if (str == null)
+                return null;
+
+            if (str.Length > 1)
+                return char.ToUpper(str[0]) + str.Substring(1);
+
+            return str.ToUpper();
+        }
+
         private static void Interpret(ASTree root)
         {
             foreach(ASTree child in root.Children)
@@ -482,11 +482,10 @@ namespace Interpreter
                         switch (child.Children[0].LexInfo)
                         {
                             case "walkSpeed":
-<<<<<<< HEAD
-                                robot.walkSpeed = float.Parse(child.Children[1].Value);
-=======
-							robot.setSpeed("Normal",int.Parse(child.Children[1].Value));
->>>>>>> refs/remotes/origin/master
+							    robot.setSpeed("Normal",int.Parse(child.Children[1].Value));
+                                break;
+                            case "willJump":
+                                robot.canJump("Normal", bool.Parse(FirstLetterToUpper(child.Children[1].Value)), 10);
                                 break;
                         }
                         break;

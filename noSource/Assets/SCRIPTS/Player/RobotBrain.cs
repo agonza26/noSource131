@@ -187,11 +187,6 @@ public class RobotBrain : MonoBehaviour {
 
 
 	public void toggleRun(){
-<<<<<<< HEAD
-        InputField Input = GameObject.Find("arrows").GetComponent<InputField>();
-        Interpreter.Interpreter.RunInterpreter(Input.text);
-		run = !run;
-=======
 		if (!error) {
 			run = !run;
 
@@ -205,7 +200,6 @@ public class RobotBrain : MonoBehaviour {
 				bod.velocity = Vector2.zero;
 				transform.position = startPos;
 			}
->>>>>>> refs/remotes/origin/master
 
 		}
 	}
