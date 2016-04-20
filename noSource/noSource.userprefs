@@ -1,10 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SCRIPTS/Player/RobotBrain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../deepsquid/Rising Tide/Assets/Scripts/System/CameraController.cs">
     <Files>
-      <File FileName="Assets/SCRIPTS/shit.cs" Line="1" Column="1" />
-      <File FileName="Assets/SCRIPTS/Player/RobotBrain.cs" Line="35" Column="26" />
-      <File FileName="Assets/SCRIPTS/Interpreter/Interpreter.cs" Line="196" Column="10" />
+      <File FileName="../../deepsquid/Rising Tide/Assets/Scripts/System/CameraController.cs" Line="54" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

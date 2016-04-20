@@ -484,8 +484,8 @@ namespace Interpreter
                             case "walkSpeed":
 							    robot.setSpeed("Normal",int.Parse(child.Children[1].Value));
                                 break;
-                            case "willJump":
-                                robot.canJump("Normal", bool.Parse(FirstLetterToUpper(child.Children[1].Value)), 10);
+					case "willJump":
+                                robot.canJump("Normal", bool.Parse(FirstLetterToUpper(child.Children[1].Value)), 3);
                                 break;
                         }
                         break;

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class RobotBrain : MonoBehaviour {
+public class RobotBran : MonoBehaviour {
 
 
 
@@ -52,9 +52,9 @@ public class RobotBrain : MonoBehaviour {
 
 		bod = GetComponent<Rigidbody2D> ();
 		startPos = transform.position;
-		layers.Add("Normal", new Tuple<bool, int, int>(false,0,1));
-		layers.Add("Blue", new Tuple<bool, int, int>(false,0,1));
-		layers.Add("Green", new Tuple<bool, int, int>(false,0,1));
+		layers.Add("Normal", new Tuple<bool, int, int>(false,3,4));
+		layers.Add("Blue", new Tuple<bool, int, int>(true,-3,4));
+		layers.Add("Green", new Tuple<bool, int, int>(true,3,4));
 		startSwitch = true;
 
 	}
@@ -76,8 +76,8 @@ public class RobotBrain : MonoBehaviour {
 	void FixedUpdate () {
 		if (startSwitch&&run) {
 
-			InputField Input = GameObject.Find("arrows").GetComponent<InputField>();
-			Interpreter.Interpreter.RunInterpreter(gameObject.GetComponent<RobotBrain>(), Input.text);
+			//InputField Input = GameObject.Find("arrows").GetComponent<InputField>();
+			//Interpreter.Interpreter.RunInterpreter(gameObject.GetComponent<RobotBrain>(), Input.text);
 			startSwitch = false;
 		}
 
@@ -103,9 +103,7 @@ public class RobotBrain : MonoBehaviour {
 
 
 	public void canJump(string layer = "Normal" , bool activated = true, int height = 1 ){
-		
 		layers [layer].a = activated;
-		print (layers [layer]);
 		layers [layer].c = height;
 	}
 
@@ -334,19 +332,4 @@ public class RobotBrain : MonoBehaviour {
 
 
 
-class Tuple<t1,t2,t3> {
 
-	public t1 a;
-	public t2 b;
-	public t3 c;
-
-	public Tuple(t1 v1,t2 v2,t3 v3)
-	{
-		a = v1;
-		b = v2;
-		c = v3;
-		// Add code here
-	}
-
-
-}

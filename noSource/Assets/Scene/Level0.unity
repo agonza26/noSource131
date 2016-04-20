@@ -3089,6 +3089,8 @@ MonoBehaviour:
   sceneName: Level1
   player: {fileID: 0}
   prefab: {fileID: 153372, guid: a02301c84c47545faae4a14ee9fb123d, type: 2}
+  prefab2: {fileID: 0}
+  swithcThis: 0
 --- !u!4 &110537638
 Transform:
   m_ObjectHideFlags: 0
@@ -6231,6 +6233,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 267746611}
+    - target: {fileID: 11457548, guid: 5b3478cfe89b34edf8a4f50708cf3c5a, type: 2}
+      propertyPath: m_Text
+      value: Play();
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b3478cfe89b34edf8a4f50708cf3c5a, type: 2}
   m_IsPrefabParent: 0
